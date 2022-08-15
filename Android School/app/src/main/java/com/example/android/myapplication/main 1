@@ -1,0 +1,80 @@
+package com.example.manarschool;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+private Handler mHendler = new Handler();
+       ArrayList<Student> Students = new ArrayList<>();
+
+       //s1 , s2 , s3
+    //0,1,2
+
+    int Manar = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    public void startRepeating(View v ) {
+      mHendler.postDelayed(mRunnable, delayMillis:5000)
+    }
+
+    private Runnable mRunnable = new Runnable() {
+        @Override
+        public void run() {
+            Toast.makeText(Context:MainActivity.this, Text"S1" , Toast.LENGTH_SHORT);
+        }
+    }
+        setContentView(R.layout.activity_main);
+
+
+       TextView StudentName , StudentAge , StudentGrade;
+       ImageView StudentPhoto;
+        Button Next;
+
+        StudentName = findViewById(R.id.StudentName);
+        StudentAge = findViewById(R.id.StudentAge);
+        StudentGrade = findViewById(R.id.StudentGrade);
+        StudentPhoto = findViewById(R.id.StudentPhoto);
+        Next = findViewById(R.id.Next);
+
+        //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+        Student s1 = new Student ( " Yousef" , 14 , 12 , R.drawable.st1);
+        Student s2 = new Student ( " Salman" , 13 , 10 , R.drawable.st2);
+        Student s3 = new Student ( " Majed" , 15 , 11 , R.drawable.st3);
+
+
+        Student.add(s1);
+        Student.add(s2);
+        Student.add(s3);
+
+            Next.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Manar++;
+                    StudentName.setText(Students.get(Manar).getStudentName()) ;{
+                    StudentAge.setText(String.valueOf(Students.get(Manar).getStudentAge()));
+                    StudentGrade.setText(String.valueOf(Students.get(Manar).getStudentGrade()));
+                    }
+
+                }
+            });
+
+         }
+}

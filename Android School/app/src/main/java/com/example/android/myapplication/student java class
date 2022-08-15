@@ -1,0 +1,59 @@
+package  com.example.manarschool;
+
+import android.widget.Button;
+
+public class Student {
+
+    private String StudentName;
+    private int StudentAge;
+    private int StudentGrade;
+    private int StudentPhoto;
+
+    public static void add(Student s1) {
+    }
+
+    public String getStudentName() {
+        return StudentName;
+    }
+
+    public void setStudentName(String studentName) {
+        StudentName = studentName;
+    }
+
+    public int getStudentAge() {
+        return StudentAge;
+    }
+
+    public void setStudentAge(int studentAge) {
+        StudentAge = studentAge;
+    }
+
+    public int getStudentGrade() {
+        return StudentGrade;
+    }
+
+    public void setStudentGrade(int studentGrade) {
+        StudentGrade = studentGrade;
+    }
+
+    public int getStudentPhoto() {
+        return StudentPhoto;
+    }
+
+    public void setStudentPhoto(int studentPhoto) {
+        StudentPhoto = studentPhoto;
+    }
+
+    public Student(String studentName , int studentAge , int
+            studentGrade , int studentPhoto){
+
+        this.StudentName = studentName;
+        this.StudentAge = studentAge;
+        this.StudentGrade = studentGrade;
+        this.StudentPhoto = studentPhoto;
+
+
+
+    }
+
+}
