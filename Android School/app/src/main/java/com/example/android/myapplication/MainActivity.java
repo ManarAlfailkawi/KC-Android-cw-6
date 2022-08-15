@@ -1,18 +1,15 @@
 package com.example.android.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
+public class student {
 
-public class MainActivity extends AppCompatActivity {
-    /**
-     *  عرفوا مصفوفة بإسم students
-     *  define an arraylist named students
-     */
+    private string studentName ;
+    private int studentAge ;
+    private int studentPhoto
+
+
+            pup
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
